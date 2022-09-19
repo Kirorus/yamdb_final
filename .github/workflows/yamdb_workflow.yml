@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  PEP8-Tests:
+  Tests:
     runs-on: ubuntu-latest
 
     steps:
