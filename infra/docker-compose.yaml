@@ -12,7 +12,7 @@ services:
       - ./.env
 
   web:
-    build: ../api_yamdb
+    image: kirorus/api_yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
