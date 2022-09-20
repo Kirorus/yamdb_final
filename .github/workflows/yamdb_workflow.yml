@@ -3,17 +3,14 @@ name: yamdb_workflow
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
   workflow_dispatch:
 
 jobs:
   tests:
     runs-on: ubuntu-latest
-
     steps:
-      - name: clone repository
+      - name: Clone Repository
         uses: actions/checkout@v3
 
       - name: Setup Pythone 3.7
@@ -27,6 +24,11 @@ jobs:
           pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
           pip install -r api_yamdb/requirements.txt 
 
-      - name: Test with flake8 and django tests
+      - name: Test with flake8
         run: |
-          python -m flake8 
+          python -m flake8
+
+      - name: Django tests
+        run: |
+          pytest
+          
