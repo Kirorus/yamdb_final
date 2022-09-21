@@ -1,4 +1,4 @@
-![example workflow](https://github.com/Kirorus/yamdb_final/blob/master/.github/workflows/yamdb_workflow.yml/badge.svg)
+![example workflow](https://github.com/Kirorus/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ## What YaMDb is:
 **YaMDb** collect user reviews on arts divided into categories (for example, "Books", "Movies", "Music"). A art can be assigned one or more genres. 
