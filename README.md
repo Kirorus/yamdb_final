@@ -1,6 +1,7 @@
 ![example workflow](https://github.com/Kirorus/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ## What YaMDb is:
+
 **YaMDb** collect user reviews on arts divided into categories (for example, "Books", "Movies", "Music"). A art can be assigned one or more genres. 
 A user can leave one text review for an art in the YaMDb database and rate it on a scale from one to ten. From the average user rating of an art, formed rating of art.
 You can leave comments on reviews.
