@@ -52,6 +52,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
@@ -59,6 +60,9 @@ jobs:
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
+            echo SECRET_KEY=5UP3RS3CR3TK3Y
+            echo DEBUG=0
+            echo ALLOWED_HOSTS=*
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo POSTGRES_DB=${{ secrets.POSTGRES_DB }} >> .env
             echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
@@ -76,4 +80,3 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: ${{ github.workflow }} успешно выполнен!
-        
