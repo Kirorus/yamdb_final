@@ -38,6 +38,7 @@ jobs:
       - name: Build and Push to Docker Hub
         uses: docker/build-push-action@v3
         with:
+          context: ./api_yamdb
           push: true
           tags: |
             kirorus/api_yamdb:latest
