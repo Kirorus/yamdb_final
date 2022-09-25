@@ -1,5 +1,11 @@
 ![example workflow](https://github.com/Kirorus/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+### Demo projects availeble at:
+https://yamdb.kiroru.ru
+or at:
+77.37.206.83:5080
+
+
 ## What YaMDb is:
 
 **YaMDb** collect user reviews on arts divided into categories (for example, "Books", "Movies", "Music"). A art can be assigned one or more genres. 
@@ -67,7 +73,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Registration and authorization of a new user:
 
-> POST | http://127.0.0.1:8000/api/v1/auth/signup/
+> POST | https://yamdb.kiroru.ru/api/v1/auth/signup/
 
 ```
 {
@@ -79,7 +85,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 &nbsp;
 
-> POST | http://127.0.0.1:8000/api/v1/auth/token/
+> POST | https://yamdb.kiroru.ru/api/v1/auth/token/
 
 ```
 {
@@ -93,7 +99,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Getting a list of all categories:
 
-> GET | http://127.0.0.1:8000/api/v1/categories/
+> GET | https://yamdb.kiroru.ru/api/v1/categories/
 
 > 200 OK
 
@@ -101,7 +107,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Search by genre:
 
-> GET | http://127.0.0.1:8000/api/v1/genres/?search=rock-n-roll
+> GET | https://yamdb.kiroru.ru/api/v1/genres/?search=rock-n-roll
 
 > 200 OK
 
@@ -109,7 +115,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Getting a list of arts filtered by year and category:
 
-> GET | http://127.0.0.1:8000/api/v1/titles/?year=1994&category=movie
+> GET | https://yamdb.kiroru.ru/api/v1/titles/?year=1994&category=movie
 
 > 200 OK
 
@@ -117,7 +123,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Adding an art:
 
-> POST | http://127.0.0.1:8000/api/v1/titles/
+> POST | https://yamdb.kiroru.ru/api/v1/titles/
 
 ```
 {
@@ -138,7 +144,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Getting review by id:
 
-> GET | http://127.0.0.1:8000/api/v1/titles/1/reviews/2/
+> GET | https://yamdb.kiroru.ru/api/v1/titles/1/reviews/2/
 
 > 200 OK
 
@@ -146,7 +152,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Partial review update:
 
-> PATCH | http://127.0.0.1:8000/api/v1/titles/1/reviews/1/
+> PATCH | https://yamdb.kiroru.ru/api/v1/titles/1/reviews/1/
 
 ```
 {
@@ -160,7 +166,7 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Deleting a comment:
 
-> DELETE | http://127.0.0.1:8000/api/v1/titles/5/reviews/2/comments/1/
+> DELETE | https://yamdb.kiroru.ru/api/v1/titles/5/reviews/2/comments/1/
 
 > 204 NO_CONTENT
 
@@ -168,13 +174,13 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Getting and changing user data by username:
 
-> GET | http://127.0.0.1:8000/api/v1/users/bingobongo/
+> GET | https://yamdb.kiroru.ru/api/v1/users/bingobongo/
 
 > 200 OK
 
 &nbsp;
 
-> PATCH | http://127.0.0.1:8000/api/v1/users/bingobongo/
+> PATCH | https://yamdb.kiroru.ru/api/v1/users/bingobongo/
 
 > 200 OK
 
@@ -182,13 +188,13 @@ docker-compose exec web python manage.py loaddata fixtures.json
 
 #### Getting and changing your account information:
 
-> GET | http://127.0.0.1:8000/api/v1/users/me/
+> GET | https://yamdb.kiroru.ru/api/v1/users/me/
 
 > 200 OK
 
 &nbsp;
 
-> PATCH | http://127.0.0.1:8000/api/v1/users/me/
+> PATCH | https://yamdb.kiroru.ru/api/v1/users/me/
 
 > 200 OK
 
