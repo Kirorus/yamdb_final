@@ -6,6 +6,9 @@ https://yamdb.kiroru.ru
 or at:
 > 77.37.206.83:5080
 
+### ReDoc availeble at:
+https://yamdb.kiroru.ru/redoc/
+
 
 ## What YaMDb is:
 
